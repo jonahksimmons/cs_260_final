@@ -1,0 +1,92 @@
+:root {
+	--background: #caccf6;
+	--foreground: #0a1207;
+	--title: #F99904;
+
+	--color0: #0a1207;
+	--color1: #BDB416;
+	--color2: #F99904;
+	--color3: #5235B7;
+	--color4: #A52EBF;
+	--color5: #DE0FF1;
+	--color6: #23B8E7;
+	--color7: #caccf6;
+	--color8: #8d8eac;
+  
+}
+/* Basic */
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+body {
+	color: var(--background);
+	margin: 0;
+	padding: 0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	text-align: center;
+	font-size: 120%;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+p,code { color: var(--foreground); }
+p.text-body { text-align: left; margin: 35px; }
+h1,h2,h3,h4,h5,h6 { color: var(--title); }
+
+/* Parallax */
+div.parallax-pane {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	transform-style: preserve-3d;
+}
+div.parallax-layer {
+	position: absolute;
+	top:0;left:0;right:0;bottom:0;
+}
+
+div.title-pane {
+}
+div.title-image {
+	background: url("./resources/source_code.jpg") no-repeat center;
+	background-size: cover;
+	transform: translateZ(-600px) scale(3);
+	z-index: 1;
+}
+div.title-text {
+	background: linear-gradient(
+	rgba(105, 211, 252, 0.25) 0%,
+	rgba(255, 116, 161, 0.25) 86%,
+	rgba(1, 0, 0, 0.25) 100%
+	);
+	background-size: cover;
+	transform: translateZ(0) scale(1);
+	z-index: 7;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 40rem;
+	height: 25rem;
+}
+
+#site-title {
+	font-size: 220%;
+	text-shadow: 6px 6px 3px var(--foreground);
+}
+#subtitle {
+	font-size: 120%;
+	text-shadow: 6px 6px 2px var(--foreground);
+}
+
+
+

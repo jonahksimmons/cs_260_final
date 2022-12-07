@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Final</title>
+	<link href="favicon.png" rel="shortcut icon">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="parallax-pane title-pane">
+		<div class="parallax-layer title-image"></div>
+		<div class="parallax-layer title-text">
+			<h1 class="title" id="site-title">How to fix all of your bugs</h1>
+			<h2 id="subtitle">And why questions are important</h2>
+		</div>
+	</div>
+	<div class="parallax-pane">
+		<p id="story">The situation is all too familiar. We take on a project too ambitious for our skill level and hit a bug we can not seem to fix. We tear our hair out trying to solve it on our own, but eventually seek guidance from a friend or cry out to Stack Overflow for help. We are either met with nothing, a snarky response, or an answer that completely misses the mark. We conclude that the world hates us and decide to go play Minecraft instead.</p>
+		<p class="text-body">No one is perfect; us programmers know this all too well. Handling the inevitable problems in our code is vital not only to your ability to get the task done, but also to learn and grow as a developer. When we don't know the solution ourselves, we ask others for advice. But why do some of our questions go unanswered while others are quickly attended to? The common culprit is the quality of our questions.</p>
+		<div id="solution">
+			<h2 class="section-title">What is a "good" question?</h2>
+			<p class="text-body">There are many ways of approaching this, but here are some general guidelines from around ten years of creating and fixing bugs.</p>
+		</div>
+	</div>
+
+	<div class="parallax-pane">
+		<div id="give-background" class="step">
+			<h2 class="section-title">Give background</h2>
+			<p class="text-body">This is often the most overlooked part. Every project is set up differently and is made up of many moving parts. What language is it written in? What framework or libraries does it use? What platforms are you targeting?</p>
+			<p class="example">I'm writing a bash script...</p>
+		</div>
+		<div id="goal" class="step">
+			<h2 class="section-title">Say what you want it to do</h2>
+			<p class="text-body">Knowing the error messages is helpful, but knowing what you want to do is even more helpful. The issue you are having could be your syntax, but it could also be your approach. What purpose do you want this part of your program to solve? How do you want it to fit into the rest of your project?</p>
+			<p class="example">...to search through a file for multiple strings, but...</p>
+		</div>
+		<div id="actual-output" class="step">
+			<h2 class="section-title">Explain what it actually does</h2>
+			<p class="text-body">Now list the problem. This could include error messages, command line output, or anything else that the program interacts with.</p>
+			<p class="example">...it always shows nothing.</p>
+		</div>
+		<div id="relevant-code" class="step">
+			<h2 class="section-title">Show relevant code</h2>
+			<p class="text-body">Although it might be tempting, don't just skip to this step. It is really important, but harder to decipher without the previous information.</p>
+			<p class="example">This is the command I'm using: </p>
+			<code class="example">cat users.txt | grep "Name" | grep "Age"</code>
+		</div>
+		<div id="more-info" class="step">
+			<h2 class="section-title">More info is better than less info</h2>
+			<p class="text-body">If you have error messages, show the full message. If you are working on a front end, show screenshots. This can save a lot of back and forth with people asking for logs or stack traces.</p>
+			<p class="question">Running it produces an error code of 1</p>
+		</div>
+		<div class="solution">
+			<p>With this information, someone can now propose a solution. In this case, the correct code would be</p>
+			<code>grep -e Name -e Age users.txt</code>
+		</div>
+	</div>
+
+	<div class="parallax-pane">
+		<p id="summary">Asking questions is really important for learning and asking good questions help speed up that growth. Hopefully this guide will aid you when you next cry into the cold, unforgiving void of Stack Overflow or bug a senior dev for the 100th time. And maybe, just maybe, you will get a answer to match the high quality of your question.</p> 
+	</div>
+
+	<div id="footer">
+		<a href="https://github.com">Link to Github repo</a>
+	</div>
+</body>
+</html>
+
