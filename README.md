@@ -1,5 +1,5 @@
 # Cs 260 Final project
-Test of what could be done with just html and css. I learned a lot about design, writting, and web development through this and hope you find it educational or interesting.
+Test of what could be done with just html and css. Note that this only works on full screen desktop as of now. I learned a lot about design, writting, and web development through this and hope you find it educational or interesting. 
 
 
 ## Inspiration
