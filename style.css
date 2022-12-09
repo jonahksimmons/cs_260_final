@@ -8,17 +8,6 @@
 
 	--footer-left: #caccf6;
 	--footer-right: #23B8E7;
-
-	--color0: #0a1207;
-	--color1: #BDB416;
-	--color2: #F99904;
-	--color3: #5235B7;
-	--color4: #A52EBF;
-	--color5: #DE0FF1;
-	--color6: #23B8E7;
-	--color7: #caccf6;
-	--color8: #8d8eac;
-  
 }
 /* Basic */
 html {
@@ -216,12 +205,3 @@ a.footer:hover {
 	from { box-shadow: 0 0 2px var(--footer-right); }
 	to { box-shadow: 0 0 20px var(--footer-right); }
 }
-
-
-
-/*background: linear-gradient(
-	45deg,
-	var(--footer-left) 80%,
-	var(--footer-right) 20%
-);*/
-
