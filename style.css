@@ -48,6 +48,7 @@ div.parallax-pane {
 	transform-style: inherit;
 	width: 100vw;
 	text-align: center;
+	overflow: hidden;
 
 }
 .title-pane::before {
@@ -174,7 +175,7 @@ a.footer:hover {
 
 /* Custom scroll bar */
 /*  Chrome */
-::-webkit-scrollbar { width: 2em; }
+::-webkit-scrollbar { width: 1em; }
 ::-webkit-scrollbar-track { background: var(--high-background); }
 ::-webkit-scrollbar-thumb { background: var(--footer-right); }
 /*  Firefox */
