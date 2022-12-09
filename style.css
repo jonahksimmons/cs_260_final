@@ -6,8 +6,8 @@
 	--high-background: #20202c;
 	--selected-foreground: #ffffff;
 
-	--example-left: #DE0FF1;
-	--example-right: #23B8E7;
+	--footer-left: #caccf6;
+	--footer-right: #23B8E7;
 
 	--color0: #0a1207;
 	--color1: #BDB416;
@@ -42,6 +42,9 @@ body {
 	font-size: 120%;
 	font-family: Helvetica,Arial,sans-serif;
 	scroll-behavior: smooth;
+
+	/* Experimental */
+	scroll-timeline: body-progress vertical;
 }
 
 p,code { color: var(--foreground); }
@@ -96,9 +99,10 @@ div.parallax-pane {
 	left: 50%;
 	transform: translate(-50%, 0%); 
 	width: 35px;
+
+	animation: opacity_pulse 1s ease-in-out infinite alternate;
 }
 
-/* Wrapper for rest of article */
 div.content {
 	z-index: 2;
 	position: absolute;
@@ -138,6 +142,8 @@ div.full-pane {
 	right: 5%;
 	transform: translate(-50%, 0%); 
 	width: 30px;
+
+	animation: opacity_pulse 3s ease-in-out infinite alternate;
 }
 
 div.example {
@@ -159,13 +165,63 @@ div.closing-thoughts {
 
 a.footer {
 	color: var(--background);
-	background: linear-gradient(
-		45deg,
-		var(--foreground) 50%,
-		var(--example-right) 50%
-	);
 	padding: 5px;
 	border-radius: 5px;
-	opacity: 0.5;
+	background: var(--footer-left);
+	opacity: 0.6;
+	transition: 100ms ease-in-out;
+	animation: light-flicker 1s linear infinite alternate;
 }
+a.footer:hover {
+	background: linear-gradient(
+		45deg,
+		var(--footer-left) 0 30%,
+		var(--footer-right) 30% 80%
+	);
+	opacity: 1;
+	box-shadow: 0 0 50px var(--footer-right);
+	animation: pause;
+}
+
+/* Custom scroll bar */
+/*  Chrome */
+::-webkit-scrollbar { width: 2em; }
+::-webkit-scrollbar-track { background: var(--high-background); }
+::-webkit-scrollbar-thumb { background: var(--footer-right); }
+/*  Firefox */
+* { scrollbar-color: var(--footer-right) var(--high-background); }
+
+/* Experimental scroll-timeline */
+.scroll-progress-bar {
+	height: 5px;
+	background: var(--footer-right);
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	transform: translateX(-100%);
+
+	box-shadow: 0 0 5px var(--background);
+
+	animation: scroll-progress 1s linear both;
+	animation-timeline: body-progress;
+}
+@keyframes scroll-progress { to { transform: translateX(0%); } }
+
+/* Animations */
+@keyframes opacity_pulse {
+	from { opacity: 0.4; }
+	to { opacity: 0.9; }
+}
+@keyframes light-flicker {
+	from { box-shadow: 0 0 2px var(--footer-right); }
+	to { box-shadow: 0 0 20px var(--footer-right); }
+}
+
+
+
+/*background: linear-gradient(
+	45deg,
+	var(--footer-left) 80%,
+	var(--footer-right) 20%
+);*/
 
