@@ -12,5 +12,5 @@ Use whatever method you prefer
 
 
 ## Credits
-All code and pictures are public domain or my own work
+All code and other pictures are public domain or my own work
 
